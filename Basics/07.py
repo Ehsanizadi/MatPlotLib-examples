@@ -1,15 +1,21 @@
 import matplotlib.pyplot as plt
 
-x=[0, 1 ,2 ,3 , 4, 5, 6, 7, 8, 9]
-y1=[75 ,74.5,73,67,54  ,34,12,2  ,0.5,0]
-y2=[0  ,12  ,24,55,60  ,61,62,62 ,62,62]
-y3=[22 ,25  ,27,28,28.1,28,27,24 ,18,16]
-y4=[110,100 ,85,30,21.5,30,85,100,110,115]
 
-plt.stackplot(x,y1,y2,y3,y4 , colors=['m','b','r','k'])
+slices 	= [7,15,32,5,12,22]
+mylabels= ['CPT','SPT','Direct shear test','Triaxial test','Vane test','in-situ testing']
+mycolors= ['m','r','b','c','g','y']
 
-plt.xlabel('Deformation (mm)')
-plt.ylabel('Shear strength (kPa)')
-plt.legend()
+#  All is self explanatory, one point about explode, it pulls out the element you set non-zero. Just a way to draw the attention
+#  of you audience to the "Vane tests". 
+#  The parameter 'autopct' adds percentage on the slices.
+plt.pie(slices,
+		labels=mylabels, 
+		colors=mycolors, 
+		startangle=30, 
+		shadow= True, 
+		explode=(0,0,0,0,0.2,0),
+		autopct='%1.1f%%')
+
+plt.title('Variety of geotechnical tests in wherever!!')
 
 plt.show()
