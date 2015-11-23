@@ -1,5 +1,3 @@
-#  load data from file: The numpy approach (BETTER APPROACH! TRUST ME! ;-) )
-
 import matplotlib.pyplot as plt
 import numpy as np
 
