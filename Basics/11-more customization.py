@@ -1,5 +1,4 @@
-#  Unix time
-
+#  More customization of colors and fills 
 import matplotlib.pyplot as plt
 import numpy as np
 

@@ -7,7 +7,7 @@ x = [] # shearing displacement
 y = [] # shear strength
 z = [] # topPlate vertical displacement
 
-with open('data.txt', 'r') as csvfile:
+with open('../Text files (data)/data.txt', 'r') as csvfile:
 	# to ignore the first line! (the first line contains headers which are the titles of each column)
 	next(csvfile, None)
 	source = csv.reader(csvfile, delimiter = ' ')
