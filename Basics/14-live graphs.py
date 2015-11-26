@@ -1,12 +1,6 @@
-#  Styles
+#  Live graphs
 import matplotlib.pyplot as plt
 import numpy as np
-#  add this line in order to access the "ready-to-use" styles of matplotlib
-from matplotlib import style
-
-# You can pick the style you prefer
-# style.use('ggplot')
-style.use('fivethirtyeight')
 
 
 time, shearingDisp, verticalDisp, fsf, rsf, totalForce, shearStress, manifold, contact, CN = np.loadtxt('../Text files (data)/data.txt', delimiter=' ', unpack=True, skiprows=1)
