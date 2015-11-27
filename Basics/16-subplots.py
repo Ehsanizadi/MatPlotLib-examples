@@ -33,7 +33,7 @@ plt.subplots_adjust(left=0.1, bottom= 0.1, right= 0.95, top=0.95, wspace=0.1, hs
 
 ax1.grid(True,color='grey', linestyle=':')
 
-ax1.legend()
+ax1.legend(loc = 'best')
 
 # All settings for AX2
 ax2.plot(shearingDisp, verticalDisp, label='Dilation (mm)', color='k', linewidth=2)
@@ -59,7 +59,7 @@ plt.subplots_adjust(left=0.1, bottom= 0.1, right= 0.95, top=0.95, wspace=0.1, hs
 
 ax2.grid(True,color='grey', linestyle=':')
 
-ax2.legend()
+ax2.legend(loc = 'best')
 
 
 
