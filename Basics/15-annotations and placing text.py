@@ -36,7 +36,7 @@ ax1.tick_params(axis='y', colors='#3a3a3a')
 
 # In order to change font and textual customizations you can define fontDicts and use them.
 # Available font families: 'serif', 'sans-serif', 'cursive', 'fantasy', 'monospace'
-myOwnFontDict= {'family':'sans-serif', 'color':'green', 'size':20}
+myOwnFontDict= {'family':'serif', 'color':'green', 'size':20}
 myOwnFontDict2= {'family':'cursive', 'color':'black', 'size':20}
 
 # Here you can add texts to your plots based on the coordinates you used for data plottting
