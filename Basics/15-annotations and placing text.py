@@ -1,11 +1,8 @@
 #  Annotations and placing text on graph
 import matplotlib.pyplot as plt
 import numpy as np
-#  add this line in order to access the "ready-to-use" styles of matplotlib
 from matplotlib import style
 
-# You can pick the style you prefer
-# style.use('ggplot')
 style.use('fivethirtyeight')
 
 
@@ -20,13 +17,11 @@ plt.plot(shearingDisp, shearStress, label='Shear stress (kPa)', color='k', linew
 plt.xlabel('Shear deformation (mm)')
 plt.ylabel('Shear stress (GPa)')
 
-# To change the characteristics of each axis line, thickness, color and ticks
 ax1.spines['left'].set_color('#3a3a3a')
 ax1.spines['right'].set_color('#3a3a3a')
 ax1.spines['bottom'].set_color('#3a3a3a')
 ax1.spines['top'].set_color('#3a3a3a')
 
-# ax1.spines['top'].set_visible(False)
 
 ax1.spines['left'].set_linewidth('2.5')
 ax1.spines['bottom'].set_linewidth('2.5')
@@ -37,7 +32,21 @@ ax1.tick_params(axis='x', colors='#3a3a3a')
 ax1.tick_params(axis='y', colors='#3a3a3a')
 
 
-# plt.title('The stress-strain behaviour of soil sample]')
+
+
+# In order to change font and textual customizations you can define fontDicts and use them.
+# Available font families: 'serif', 'sans-serif', 'cursive', 'fantasy', 'monospace'
+myOwnFontDict= {'family':'sans-serif', 'color':'green', 'size':20}
+myOwnFontDict2= {'family':'cursive', 'color':'black', 'size':20}
+
+# Here you can add texts to your plots based on the coordinates you used for data plottting
+ax1.text(shearingDisp[10], shearStress[3], 'My own text!', fontdict=myOwnFontDict)
+ax1.text(shearingDisp[10], shearStress[0], 'My own text!', fontdict=myOwnFontDict2)
+
+# To print data points!, possibly worthless
+'''for i in range(len(shearingDisp)):
+	ax1.text(shearingDisp[i], shearStress[i], shearStress[i])
+'''
 plt.subplots_adjust(left=0.1, bottom= 0.1, right= 0.95, top=0.95, wspace=0.1, hspace= 0.1)
 
 ax1.grid(True,color='grey', linestyle=':')
