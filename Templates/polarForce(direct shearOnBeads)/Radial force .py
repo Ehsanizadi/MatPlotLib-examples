@@ -14,7 +14,6 @@ shearDisp, angle, contactForce = np.loadtxt('polarForceData.0.csv', delimiter=' 
 
 # All settings for AX1
 ax1.bar(angle, contactForce, label='Shear Stress (kPa)', color='k', linewidth=2)
-# bars = ax1.bar(angle, contactForce, width=0.2, bottom=0.0)
 
 ax1.set_xlabel('Normal force (N)')
 
