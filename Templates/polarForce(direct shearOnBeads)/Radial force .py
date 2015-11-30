@@ -14,6 +14,7 @@ shearDisp, angle, contactForce = np.loadtxt('polarForceData.0.csv', delimiter=' 
 
 # All settings for AX1
 
+# Convert degree to radians
 correctedAngle = angle * 0.0174533
 
 ax1.plot(correctedAngle, contactForce, label='Shear Stress (kPa)', color='k', linewidth=2)
