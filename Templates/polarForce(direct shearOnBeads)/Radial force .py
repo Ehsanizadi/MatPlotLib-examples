@@ -41,7 +41,8 @@ ax1.tick_params(axis='y', colors='#3a3a3a')
 plt.subplots_adjust(left=0.1, bottom= 0.12, right= 0.9, top=0.91, wspace=0.15, hspace= 0.2)
 
 ax1.grid(True,color='grey', linestyle=':')
-ax1.set_yticks([0,1000,2000,3000,4000,5000,6000])
+ax1.set_yticks([0,1000,2000,3000,4000])
+plt.ylim([0,4000])
 
 # ax1.legend(loc = 'best')
 
