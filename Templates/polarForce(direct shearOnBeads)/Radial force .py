@@ -18,7 +18,7 @@ shearDisp, angle, contactForce = np.loadtxt('polarForceData.0.csv', delimiter=' 
 correctedAngle = angle * 0.0174533
 
 ax1.plot(correctedAngle, contactForce, label='Shear Stress (kPa)', color='k', linewidth=2)
-ax1.fill_between(correctedAngle, contactForce, color = 'k' , alpha=0.7)
+ax1.fill_between(correctedAngle, contactForce, color = 'grey' , alpha=1)
 
 ax1.set_xlabel('Normal force (N)')
 
@@ -43,7 +43,7 @@ plt.subplots_adjust(left=0.1, bottom= 0.12, right= 0.9, top=0.91, wspace=0.15, h
 ax1.grid(True,color='grey', linestyle=':')
 # ax1.set_xticks([0,30,60,90,120,150,180])
 
-ax1.legend(loc = 'best')
+# ax1.legend(loc = 'best')
 
 
 plt.show()
