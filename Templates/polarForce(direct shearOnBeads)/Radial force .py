@@ -13,7 +13,11 @@ ax1 = plt.subplot(111, projection='polar')
 shearDisp, angle, contactForce = np.loadtxt('polarForceData.0.csv', delimiter=' ', unpack=True, skiprows=1)
 
 # All settings for AX1
-ax1.bar(angle, contactForce, label='Shear Stress (kPa)', color='k', linewidth=2)
+
+correctedAngle = angle * 0.0174533
+
+ax1.plot(correctedAngle, contactForce, label='Shear Stress (kPa)', color='k', linewidth=2)
+ax1.fill_between(correctedAngle, contactForce, color = 'k' , alpha=0.7)
 
 ax1.set_xlabel('Normal force (N)')
 
