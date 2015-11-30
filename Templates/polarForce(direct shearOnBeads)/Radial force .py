@@ -10,7 +10,7 @@ ax1 = plt.subplot(111, projection='polar')
 # ax4 = plt.subplot(414, projection='polar')
 
 
-shearDisp, angle, contactForce = np.loadtxt('polarForceData.0.csv', delimiter=' ', unpack=True, skiprows=1)
+shearDisp, angle, contactForce = np.loadtxt('polarForceData.1.csv', delimiter=' ', unpack=True, skiprows=1)
 
 # All settings for AX1
 
