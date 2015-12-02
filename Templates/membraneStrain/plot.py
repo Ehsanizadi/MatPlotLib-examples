@@ -27,9 +27,9 @@ zGrid = griddata(X, z, deforamtion, xGrid, yGrid, interp='linear')
 
 
 # contour the gridded data, plotting dots at the nonuniform data points.
-ax1 = plt.contour(xGrid, yGrid, zGrid, 15, linewidths=0.1, colors='grey')
-ax1 = plt.contourf(xGrid, yGrid, zGrid, 15, cmap=plt.cm.RdBu,
-                  vmax=abs(zGrid).max(), vmin=-abs(zGrid).max())
+ax1 = plt.contour(xGrid, yGrid, zGrid, 7, linewidths=0.1, colors='grey')
+ax1 = plt.contourf(xGrid, yGrid, zGrid, 7, cmap=plt.cm.RdBu,
+                  vmax=abs(zGrid).max()/3, vmin=-abs(zGrid).max()/3)
 plt.colorbar()  # draw colorbar
 plt.title('membrane at the end of shearing')
 
@@ -53,8 +53,8 @@ zGridf = griddata(Xf, zf, deforamtionf, xGridf, yGridf, interp='linear')
 
 
 # contour the gridded data, plotting dots at the nonuniform data points.
-ax1 = plt.contour(xGridf, yGridf, zGridf, 15, linewidths=0.1, colors='grey')
-ax1 = plt.contourf(xGridf, yGridf, zGridf, 15, cmap=plt.cm.RdBu,
+ax1 = plt.contour(xGridf, yGridf, zGridf, 7, linewidths=0.1, colors='grey')
+ax1 = plt.contourf(xGridf, yGridf, zGridf, 7, cmap=plt.cm.RdBu,
                   vmax=abs(zGrid).max(), vmin=-abs(zGrid).max())
 plt.colorbar()  # draw colorbar
 plt.title('membrane prior to shearing')
