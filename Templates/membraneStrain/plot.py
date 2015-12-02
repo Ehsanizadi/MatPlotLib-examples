@@ -9,7 +9,7 @@ import numpy as np
 fig1 = plt.figure(facecolor='white')
 
 # Settings for membrane prior to shearing
-x, y, z, deforamtion = np.loadtxt('membraneStrain-final.csv', delimiter=',', unpack=True, skiprows=1)
+x, y, z, deforamtion = np.loadtxt('membraneStrain-initial.csv', delimiter=',', unpack=True, skiprows=1)
 
 membraneRadius = 25.8
 Z=z
@@ -29,14 +29,14 @@ zGrid = griddata(X, z, deforamtion, xGrid, yGrid, interp='linear')
 # contour the gridded data, plotting dots at the nonuniform data points.
 ax1 = plt.contour(xGrid, yGrid, zGrid, 7, linewidths=0.1, colors='grey')
 ax1 = plt.contourf(xGrid, yGrid, zGrid, 7, cmap=plt.cm.RdBu,
-                  vmax=abs(zGrid).max()/3, vmin=-abs(zGrid).max()/3)
+                  vmax=abs(zGrid).max()*10, vmin=-abs(zGrid).max()*10)
 plt.colorbar()  # draw colorbar
 plt.title('membrane at the end of shearing')
 
 
 # for final situation of membrane
 fig2 = plt.figure(facecolor='white')
-xf, yf, zf, deforamtionf = np.loadtxt('membraneStrain-initial.csv', delimiter=',', unpack=True, skiprows=1)
+xf, yf, zf, deforamtionf = np.loadtxt('membraneStrain-final.csv', delimiter=',', unpack=True, skiprows=1)
 
 Zf=zf
 Xf=xf
@@ -55,7 +55,7 @@ zGridf = griddata(Xf, zf, deforamtionf, xGridf, yGridf, interp='linear')
 # contour the gridded data, plotting dots at the nonuniform data points.
 ax1 = plt.contour(xGridf, yGridf, zGridf, 7, linewidths=0.1, colors='grey')
 ax1 = plt.contourf(xGridf, yGridf, zGridf, 7, cmap=plt.cm.RdBu,
-                  vmax=abs(zGrid).max(), vmin=-abs(zGrid).max())
+                  vmax=abs(zGrid).max()*10, vmin=-abs(zGrid).max()*10)
 plt.colorbar()  # draw colorbar
 plt.title('membrane prior to shearing')
 
