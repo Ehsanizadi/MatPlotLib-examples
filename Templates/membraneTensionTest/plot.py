@@ -16,8 +16,8 @@ Time,Extension,ThinMembraneLoad,ThickMembraneLoad = np.loadtxt('membraneTensionT
 initialLength = 100 # in mmm
 strain = Extension / 100
 
-ax1.plot(strain, ThinMembraneLoad, label='Thin membrane', color='blue', linewidth=2)
-ax1.plot(strain, ThickMembraneLoad, label='Thick membrane', color='red', linewidth=2)
+ax1.plot(strain, ThinMembraneLoad, label='Thin membrane', color='red', linewidth=2)
+ax1.plot(strain, ThickMembraneLoad, label='Thick membrane', color='blue', linewidth=2)
 
 
 ax1.set_xlabel('Strain (not in precent)')
